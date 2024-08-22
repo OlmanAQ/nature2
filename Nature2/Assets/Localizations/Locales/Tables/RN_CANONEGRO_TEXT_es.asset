@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: RN_CANONEGRO_TEXT_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: c8bf8d50c96034744a278f04847b9a11, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4389185676857344
+    m_Localized: Nombre Animal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5910451357437952
+    m_Localized: Basilisco Verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5910615044345856
+    m_Localized: Mono Cariblanco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911295406592000
+    m_Localized: Rana Arboricola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911413232979968
+    m_Localized: Rana Amarilla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911523367014400
+    m_Localized: Gran Potoo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911613649408000
+    m_Localized: Calamoncillo Americano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6123573812875264
+    m_Localized: "Murci\xE9lago Narig\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6123935198302208
+    m_Localized: Rana Venenosa Roja y Azul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6124613182377984
+    m_Localized: Cocodrilo Americano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6124707763933184
+    m_Localized: "Esp\xE1tula Rosada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6125086899654656
+    m_Localized: Caballito del Diablo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6125468501626880
+    m_Localized: Pez Gaspar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6131741624324096
+    m_Localized: "Tuc\xE1n Pico Arco\xEDris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6133477227319296
+    m_Localized: "Jabir\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6167491707359232
+    m_Localized: "Presionar para Cambiar Estaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6167776618041344
+    m_Localized: "Animales de \xC9poca Seca\n\nSe pueden observar entre: \n\nDiciembre
+      a Abril"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6168136082477056
+    m_Localized: "Animales de \xC9poca Lluviosa\n\nSe pueden observar entre: \n\nMayo
+      a Noviembre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24901242880
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1700865429504
+    m_Localized: "Informaci\xF3n Jabir\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2554498568192
+    m_Localized: Finalizar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2881650085888
+    m_Localized: "\xA1Escucha atentamente!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3367048499200
+    m_Localized: Ibis Verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3773191344128
+    m_Localized: "Esp\xE1tula Rosada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3819261579264
+    m_Localized: Jacana Centroamericana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4314592104448
+    m_Localized: "\xBFA cu\xE1l ave pertenece el sonido?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4664564830208
+    m_Localized: Volver a escuchar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1765671700189184
+    m_Localized: Lechucita Sabanera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1771097137270784
+    m_Localized: Loro Frentirrojo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1774590086533120
+    m_Localized: "Tuc\xE1n Pico Iris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14918450457563136
+    m_Localized: "Ca\xF1o Negro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14918569521270784
+    m_Localized: Comunidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14918627486552064
+    m_Localized: SINAC
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

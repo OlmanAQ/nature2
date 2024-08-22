@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: PN_AGUA_TEXT Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: PN_AGUA_TEXT
+  m_TableCollectionNameGuidString: f7c8d8b5d904473458d8414c5846e36e
+  m_Entries:
+  - m_Id: 4327001353572352
+    m_Key: PNA4_Sepal_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4327977619771392
+    m_Key: PNA4_Column_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328096930942976
+    m_Key: PNA4_Petal_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328240309030912
+    m_Key: PNA4_Lip_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328311805136896
+    m_Key: PNA4_Root_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328463479558144
+    m_Key: PNA4_Leaf_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328734859415552
+    m_Key: PNA4_Stem_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4328839134007296
+    m_Key: PNA4_Pseudobuld_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5944358682484736
+    m_Key: PNA4_OrchidName_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13482453955694592
+    m_Key: "\xBFA cu\xE1l felino pertenece el sonido?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17207060122488832
+    m_Key: manigordo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17207147804413952
+    m_Key: leopardo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17424749885575168
+    m_Key: informacion felinos
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8475763586258173960
+  references:
+    version: 2
+    RefIds:
+    - rid: 8475763586258173960
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1685811558353

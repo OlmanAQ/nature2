@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: PN_AGUA_AUDIOS_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: bcbe1393934d7304c94b46a64115bdd7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6241537354584064
+    m_Localized: 15278f76d4113594e8c5ccec1fdd54a8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10875031523381248
+    m_Localized: 9a95dfbb6b7b03e43adabd1766d79f58
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10875471703003136
+    m_Localized: f53cecc1891e2814c9a1440c267983c1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17195221292601344
+    m_Localized: 411d46b97e6ab6f4180308b7535080b0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17195489367347200
+    m_Localized: 411d46b97e6ab6f4180308b7535080b0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20730175003025408
+    m_Localized: 6d43f887bb91cae4cab674c59a6ccb5b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20731291346395136
+    m_Localized: fc5b9252ae9316a4aa7e90337f0ec38a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23549610076852224
+    m_Localized: 117b15174f0a499419c55226f5276b75
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
