@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: RN_CANONEGRO_AUDIOS Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: RN_CANONEGRO_AUDIOS
+  m_TableCollectionNameGuidString: aec53637bcab9f847bd822a8f7fa15c6
+  m_Entries:
+  - m_Id: 5910778169217024
+    m_Key: RNC1_TreeFrog_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911031077359616
+    m_Key: RNC1_YellowFrog_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911705072652288
+    m_Key: RNC1_PurpleGalline_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5911756217995264
+    m_Key: RNC1_GreatPotoo_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6125791819550720
+    m_Key: RCN1_TropicalGar_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126137048518656
+    m_Key: RNC1_Basilisc_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126242224885760
+    m_Key: RNC1_Spoonbill_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126320842919936
+    m_Key: RNC1_Crocodile_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126362148425728
+    m_Key: RNC1_RedVenemousFrog_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126570701803520
+    m_Key: RNC1_ProboscisBat_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126628402843648
+    m_Key: RNC1_Whiteface_Capuchin_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6126711546531840
+    m_Key: RNC1_Basilisc_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6130910711730176
+    m_Key: RCN1_Damselflies_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6132234996109312
+    m_Key: RCN1_KeelBilledToucan_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6133519254245376
+    m_Key: RCN1_Jabiru_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6235822158204928
+    m_Key: RCN1_Description_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6251508435734528
+    m_Key: RCN4_JabiruDescription_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10874991123845120
+    m_Key: RCN5_Jaguar_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10878613760987136
+    m_Key: RCN2_Guajipal_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13195641836195840
+    m_Key: RCN4_JabiruDescription_Audio2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14917542688542720
+    m_Key: RCN6_CN_Description_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14917635172945920
+    m_Key: RCN6_CN_Community_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14917638545166336
+    m_Key: RCN6_CN_SINAC_Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20732304946094080
+    m_Key: RCN3_GasparFish
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 8475763956886536194
+  m_KeyGenerator:
+    rid: 8475763586258173959
+  references:
+    version: 2
+    RefIds:
+    - rid: 8475763586258173959
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1685811500353
+    - rid: 8475763956886536194
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 5910778169217024
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 5911031077359616
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 5911705072652288
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 5911756217995264
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6125791819550720
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126137048518656
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126242224885760
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126320842919936
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126362148425728
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126570701803520
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126628402843648
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6126711546531840
+          m_TableCodes:
+          - es
+          - en
+        - m_KeyId: 6130910711730176
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6132234996109312
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6133519254245376
+          m_TableCodes:
+          - es
+          - en
+        - m_KeyId: 6235822158204928
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 6251508435734528
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 10874991123845120
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 10878613760987136
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 13195641836195840
+          m_TableCodes:
+          - es
+          - en
+        - m_KeyId: 14917542688542720
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 14917635172945920
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 14917638545166336
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 20732304946094080
+          m_TableCodes:
+          - en
+          - es
+        m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
