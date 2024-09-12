@@ -165,9 +165,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.unity.template.ar_mobile
+    Android: com.unity.template.nature
     Standalone: com.unity.template.ar-mobile
-    iPhone: com.unity.template.armobile
+    iPhone: com.unity.template.nature
   buildNumber:
     Bratwurst: 0
     Standalone: 0

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "613312663029",
+    "project_id": "naturetest-3fb3b",
+    "storage_bucket": "naturetest-3fb3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613312663029:android:9b291a31903adb08f124bc",
+        "android_client_info": {
+          "package_name": "com.unity.template.armobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEqAZFcVXp6ugM0e54aq2pL_DRu9qbPOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613312663029:android:d2d596f6bb2ca874f124bc",
+        "android_client_info": {
+          "package_name": "com.unity.template.nature"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEqAZFcVXp6ugM0e54aq2pL_DRu9qbPOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
