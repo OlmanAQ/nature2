@@ -38,6 +38,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CanoNegro/LoadCanoNegro1.unity
     guid: 63e66426298b65a42bb0f9a2862c37cf
+  - enabled: 1
+    path: Assets/Scenes/CanoNegro/LoadCanoNegro2.unity
+    guid: 4575493714d7f8f4f92efe40971c5a56
+  - enabled: 1
+    path: Assets/Scenes/CanoNegro/RCAnoNegro2.unity
+    guid: 5ba221d26a535aa409c1fe52e1221992
+  - enabled: 1
+    path: Assets/Scenes/Peninsula/English/VAPeninsula4.unity
+    guid: 91be5d87ea2753f40a4ce219a8969df8
+  - enabled: 1
+    path: Assets/Scenes/Peninsula/English/LoadPeninsula4.unity
+    guid: dedb9002eda43364d878bcef0e918d8a
+  - enabled: 1
+    path: Assets/Scenes/Peninsula/English/mapPeninsula.unity
+    guid: d8085cde63aed5a4ebe9804a255083e0
+  - enabled: 1
+    path: Assets/Scenes/Peninsula/English/LoadPeninsula.unity
+    guid: b060e3b4a8f761b41bd6f232cca08b2c
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/VAObservatorio6.unity
+    guid: 7f7b328f30264c243a16bc19b5d23c48
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/LoadObservatorio6.unity
+    guid: 3c1a1e75c059e324faafd5af205a775a
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/map.unity
+    guid: 3aa86a591ea1ea34eb29d9c3d00e94bd
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/LoadObservatorio.unity
+    guid: 504f8ea0ac654b4489fc4fdb9fe93c72
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
