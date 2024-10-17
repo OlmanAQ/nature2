@@ -79,7 +79,7 @@ public class mainMenu : MonoBehaviour
     //English Button Pressed
     public void goUserInformation(){
         changeLanguageToEnglish();
-        SceneManager.LoadScene("information");
+        SceneManager.LoadScene("SampleScene1");
     }
 
     //Spanish Button Pressed
