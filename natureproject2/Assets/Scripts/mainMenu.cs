@@ -113,8 +113,14 @@ public class mainMenu : MonoBehaviour
     public void goRate(){
         SceneManager.LoadScene("rate");
     }
+
+    public void goQuestions()
+    {
+        SceneManager.LoadScene("TestQuestions");
+    }
+
     /* END English Scenes */
-    
+
 
     //                                                                                 ****** Peninsula Scenes ******
     public void goPeninsula()                              //Mapa Peninsula Espanol

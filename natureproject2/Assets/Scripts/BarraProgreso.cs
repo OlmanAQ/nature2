@@ -51,7 +51,7 @@ public class BarraProgreso : MonoBehaviour
                 SceneManager.LoadScene("settings");
             } if (numEscena == 13)
             {
-                SceneManager.LoadScene("SampleScene1");
+                SceneManager.LoadScene("LoginRegister");
             }
 
             /* 2 = Observatorio Ingles*/
