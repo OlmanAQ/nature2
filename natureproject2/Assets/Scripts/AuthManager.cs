@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using Firebase.Firestore;
 using System.Collections.Generic;
-using System;
-using UnityEditor.Build.Content;
-
 public class AuthManager : MonoBehaviour
 {
     //Firebase variables
