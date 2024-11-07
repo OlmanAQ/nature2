@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using Firebase.Firestore;
 using System.Collections.Generic;
+using Google;
+using System.Net.Http;
+using Firebase.Extensions;
+
 using System;
-using UnityEditor.Build.Content;
 
 public class AuthManager : MonoBehaviour
 {
     //Firebase variables
     [Header("Firebase")]
-    public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;    
+
+    public FirebaseAuth auth;
     public FirebaseUser User;
     public FirebaseFirestore db;
 
@@ -40,9 +43,21 @@ public class AuthManager : MonoBehaviour
     const string COLLECTION_USERS = "Users";
     private string sex = "";
 
+
+    public string GoogleWebAPI = "AIzaSyDEqAZFcVXp6ugM0e54aq2pL_DRu9qbPOo";
+    private GoogleSignInConfiguration configuration;
+
+    Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
+
     void Awake()
     {
         //Check that all of the necessary dependencies for Firebase are present on the system
+        configuration = new GoogleSignInConfiguration
+        {
+            WebClientId = GoogleWebAPI,
+            RequestIdToken = true
+        };
+
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
             dependencyStatus = task.Result;
@@ -57,6 +72,12 @@ public class AuthManager : MonoBehaviour
             }
         });
     }
+
+    private void Start()
+    {
+        auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+    }
+
 
     private void InitializeFirebase()
     {
@@ -154,6 +175,14 @@ public class AuthManager : MonoBehaviour
     }
     private IEnumerator Register(string _email, string _password, string _username)
     {
+        GoogleSignIn.Configuration = configuration;
+        GoogleSignIn.Configuration.UseGameSignIn = false;
+        GoogleSignIn.Configuration.RequestIdToken = true;
+        GoogleSignIn.Configuration.RequestEmail = true;
+
+        GoogleSignIn.DefaultInstance.SignIn().ContinueWith(OnGoogleAuthenticatedFinished);
+
+
         if (_username == "")
         {
             //If the username field is blank show a warning
@@ -247,5 +276,27 @@ public class AuthManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    void OnGoogleAuthenticatedFinished(Task<GoogleSignInUser> task)
+    {
+        Firebase.Auth.Credential credential =
+        Firebase.Auth.GoogleAuthProvider.GetCredential(task.Result.IdToken, null);
+        auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            Firebase.Auth.AuthResult result = task.Result;
+            Debug.LogFormat("User signed in successfully: {0} ({1})",
+                result.User.DisplayName, result.User.UserId);
+        });
     }
 }
