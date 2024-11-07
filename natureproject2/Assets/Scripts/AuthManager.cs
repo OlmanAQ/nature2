@@ -5,6 +5,10 @@ using Firebase.Auth;
 using TMPro;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using Firebase.Firestore;
+using System.Collections.Generic;
+using System;
+using UnityEditor.Build.Content;
 
 public class AuthManager : MonoBehaviour
 {
@@ -13,6 +17,8 @@ public class AuthManager : MonoBehaviour
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;    
     public FirebaseUser User;
+    public FirebaseFirestore db;
+
 
     //Login variables
     [Header("Login")]
@@ -28,6 +34,11 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField passwordRegisterField;
     public TMP_InputField passwordRegisterVerifyField;
     public TMP_Text warningRegisterText;
+    public TMP_Dropdown nationality;
+
+    const string COLLECTION_STATS = "stats";
+    const string COLLECTION_USERS = "Users";
+    private string sex = "";
 
     void Awake()
     {
@@ -115,6 +126,32 @@ public class AuthManager : MonoBehaviour
         }
     }
 
+    public void maleSex()
+    {
+        sex = "male";
+    }
+
+    public void femaleSex()
+    {
+        sex = "female";
+    }
+
+    public void otherSex()
+    {
+        sex = "other";
+    }
+
+
+    private async Task InsertStatsUser(string userID, string country, string gender)
+    {
+        DocumentReference docRef = db.Collection(COLLECTION_USERS).Document(userID);
+        Dictionary<string, object> data = new Dictionary<string, object>
+                               {
+                                   { "user_id", userID }, {"country", country }, {"gender",gender},
+                               };
+
+        await docRef.SetAsync(data);
+    }
     private IEnumerator Register(string _email, string _password, string _username)
     {
         if (_username == "")
@@ -122,12 +159,12 @@ public class AuthManager : MonoBehaviour
             //If the username field is blank show a warning
             warningRegisterText.text = "Missing Username";
         }
-        else if(passwordRegisterField.text != passwordRegisterVerifyField.text)
+        else if (passwordRegisterField.text != passwordRegisterVerifyField.text)
         {
             //If the password does not match show a warning
             warningRegisterText.text = "Password Does Not Match!";
         }
-        else 
+        else
         {
             //Call the Firebase auth signin function passing the email and password
             Task<AuthResult> RegisterTask = auth.CreateUserWithEmailAndPasswordAsync(_email, _password);
@@ -168,7 +205,7 @@ public class AuthManager : MonoBehaviour
                 if (User != null)
                 {
                     //Create a user profile and set the username
-                    UserProfile profile = new UserProfile{DisplayName = _username};
+                    UserProfile profile = new UserProfile { DisplayName = _username };
 
                     //Call the Firebase auth update user profile function passing the profile with the username
                     Task ProfileTask = User.UpdateUserProfileAsync(profile);
@@ -185,10 +222,27 @@ public class AuthManager : MonoBehaviour
                     }
                     else
                     {
-                        //Username is now set
-                        //Now return to login screen
-                        UIManager.instance.LoginScreen();
-                        warningRegisterText.text = "";
+                        //insert user data
+                        db = FirebaseFirestore.DefaultInstance;
+                        string userID = User.UserId;
+                        string country = nationality.options[nationality.value].text;
+
+                        // Esperar a que se complete la tarea de inserción de datos
+                        Task insertTask = InsertStatsUser(userID, country, sex);
+                        yield return new WaitUntil(() => insertTask.IsCompleted);
+
+                        if (insertTask.Exception != null)
+                        {
+                            Debug.LogWarning(message: $"Failed to insert user data with {insertTask.Exception}");
+                            warningRegisterText.text = "Failed to insert user data!";
+                        }
+                        else
+                        {
+                            //Username is now set
+                            //Now return to login 
+                            UIManager.instance.LoginScreen();
+                            warningRegisterText.text = "";
+                        }
                     }
                 }
             }

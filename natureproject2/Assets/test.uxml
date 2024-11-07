@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; height: auto;">
+        <ui:Label tabindex="-1" text="Register" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="justify-content: flex-start; align-items: auto; -unity-text-align: upper-center;" />
+    </ui:VisualElement>
+</ui:UXML>
