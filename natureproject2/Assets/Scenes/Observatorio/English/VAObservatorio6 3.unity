@@ -469,6 +469,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4683157207228035379, guid: ecdbbc24e77aec44ab49c0d198257256,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2961728322938820807, guid: a21405cf225347c42b7803c04743f6b9,
+        type: 3}
     - target: {fileID: 4962201910830607289, guid: ecdbbc24e77aec44ab49c0d198257256,
         type: 3}
       propertyPath: m_Layer
@@ -896,7 +902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1043303981
 BoxCollider:
   m_ObjectHideFlags: 0
