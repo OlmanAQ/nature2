@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/developers.unity
     guid: f3561d68bc2dc7a458a136613c18114b
   - enabled: 1
-    path: Assets/Scenes/Menu/Observatorio/English/map.unity
-    guid: 2305f06ff9d17054eac697c8f38ab964
-  - enabled: 1
     path: Assets/Scenes/CanoNegro/map_RCanoNegro.unity
     guid: 2a38add829d07344bb4adb0a25a3c793
   - enabled: 1
@@ -71,6 +68,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/rate.unity
     guid: fa3490a67228b0a42971b015a78b40b2
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/VAObservatorio6 1.unity
+    guid: 9c6e7f132a2b9584992930bf98134643
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/VAObservatorio6 2.unity
+    guid: ca3d31bc588af044ea86f25f0dbe70d8
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/VAObservatorio6 3.unity
+    guid: 3b00776434569f940854f2c7eaa5797e
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/LoadObservatorio6 3.unity
+    guid: d3189066a942c40438142c991b44ee2c
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/LoadObservatorio6 2.unity
+    guid: cd5ad92dc25f30948b1d9fc4bc95f609
+  - enabled: 1
+    path: Assets/Scenes/Observatorio/English/LoadObservatorio6 1.unity
+    guid: 6eb4c932486cb6e4995e1823eea7f3a2
+  - enabled: 1
+    path: Assets/Scenes/Menu/LanguajeSettings.unity
+    guid: d330cee9bbebcb94f85083cecf49c1c8
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}

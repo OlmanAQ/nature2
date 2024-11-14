@@ -190,6 +190,18 @@ public class mainMenu : MonoBehaviour
     public void goObservatorioExperience6(){
         SceneManager.LoadScene("LoadObservatorio6");
     }
+    public void goObservatorioDecimate()
+    {
+        SceneManager.LoadScene("LoadObservatorio6 1");
+    }
+    public void goObservatorioDissolve()
+    {
+        SceneManager.LoadScene("LoadObservatorio6 2");
+    }
+    public void goObservatorioAmbas()
+    {
+        SceneManager.LoadScene("LoadObservatorio6 3");
+    }
 
     public void goObservatorioExperience7(){
         SceneManager.LoadScene("LoadObservatorio7");

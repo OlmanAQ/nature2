@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -662,7 +662,6 @@ RectTransform:
   - {fileID: 154593931}
   - {fileID: 1597190631}
   - {fileID: 437555963}
-  - {fileID: 954341561}
   - {fileID: 363146192}
   - {fileID: 2146110735}
   - {fileID: 1512726511}
@@ -706,6 +705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426065323}
   - component: {fileID: 426065322}
+  - component: {fileID: 426065324}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -790,6 +790,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &426065324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426065321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &437555962
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 416383498}
         m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: goObservatorioExperience5
+        m_MethodName: goObservatorioAmbas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2319,16 +2342,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954341560}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6454577, w: 0.7637961}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6371167, w: 0.77076745}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 416383497}
+  m_Father: {fileID: 1591915250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80.4}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247.8, y: 189.2}
+  m_AnchoredPosition: {x: 542.54254, y: -153.339}
   m_SizeDelta: {x: 12.5927, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954341562
@@ -3082,7 +3105,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 416383498}
         m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: goObservatorioExperience4
+        m_MethodName: goObservatorioDissolve
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3292,7 +3315,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 954341561}
   m_Father: {fileID: 416383497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2000.446}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3498,7 +3522,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 416383498}
         m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: goObservatorioExperience3
+        m_MethodName: goObservatorioDecimate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

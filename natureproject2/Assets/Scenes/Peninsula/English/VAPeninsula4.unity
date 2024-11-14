@@ -273,12 +273,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &675383838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7401031959881571460, guid: be11e804d7c56c840ab8550acf6baa63,
-    type: 3}
-  m_PrefabInstance: {fileID: 5743723903064042891}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &751970393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,7 +659,8 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: 9ecd748a35d681243bb8dac0d687de6e,
     type: 2}
   m_MaxNumberOfMovingImages: 0
-  m_TrackedImagePrefab: {fileID: 675383838}
+  m_TrackedImagePrefab: {fileID: 7401031959881571460, guid: be11e804d7c56c840ab8550acf6baa63,
+    type: 3}
 --- !u!114 &1032867079
 MonoBehaviour:
   m_ObjectHideFlags: 0

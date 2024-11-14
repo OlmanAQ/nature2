@@ -5,6 +5,7 @@ using Firebase;
 using Firebase.Firestore;
 using Firebase.Extensions;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DataCollector : MonoBehaviour
 {
@@ -13,8 +14,11 @@ public class DataCollector : MonoBehaviour
     private int clickCount = 0;
     private int doubleClickCount = 0;
 
-    private float lastClickTime = 0f;
-    private float doubleClickThreshold = 0.3f; // Tiempo máximo entre clics para contar como doble clic
+    private float doubleClickThreshold = 0.3f; // Tiempo máximo entre toques para contar como doble toque
+    private float tapCooldown = 0.5f; // Tiempo mínimo entre toques para evitar múltiples registros
+
+    private bool isDoubleTapPending = false; // Si está esperando el segundo toque para el doble toque
+    private Coroutine doubleTapCoroutine; // Coroutine para manejar el temporizador de doble toque
 
     void Start()
     {
@@ -47,19 +51,51 @@ public class DataCollector : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // Detección de toques en pantalla
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
-            clickCount++;
-
-            // Detección de doble clic
-            float currentTime = Time.time;
-            if (currentTime - lastClickTime <= doubleClickThreshold)
-            {
-                doubleClickCount++;
-                Debug.Log("Doble clic detectado");
-            }
-            lastClickTime = currentTime;
+            HandleTap();
         }
+        else if (Touchscreen.current == null)
+        {
+            Debug.LogWarning("Touchscreen.current es null. Asegúrate de que el sistema de entrada está configurado correctamente.");
+        }
+    }
+
+    private void HandleTap()
+    {
+        if (isDoubleTapPending)
+        {
+            // Si está esperando un segundo toque, se registra como doble toque
+            doubleClickCount++;
+            Debug.Log("Doble toque detectado. Contador de dobles toques: " + doubleClickCount);
+
+            // Reiniciar la lógica de doble toque
+            isDoubleTapPending = false;
+            if (doubleTapCoroutine != null)
+            {
+                StopCoroutine(doubleTapCoroutine); // Detener el temporizador de espera del segundo toque
+            }
+        }
+        else
+        {
+            // Si no está esperando un segundo toque, empieza a contar como un primer toque
+            clickCount++;
+            Debug.Log("Toque detectado. Contador de toques: " + clickCount);
+
+            // Configura la espera para un posible segundo toque
+            isDoubleTapPending = true;
+            doubleTapCoroutine = StartCoroutine(DoubleTapTimeout()); // Inicia el temporizador de espera
+        }
+    }
+
+    private IEnumerator DoubleTapTimeout()
+    {
+        // Espera el tiempo límite para un segundo toque
+        yield return new WaitForSeconds(doubleClickThreshold);
+
+        // Si el tiempo se cumple sin recibir un segundo toque, se considera un toque simple
+        isDoubleTapPending = false;
     }
 
     IEnumerator TimeCounter()
@@ -76,20 +112,21 @@ public class DataCollector : MonoBehaviour
         if (firestore == null)
         {
             Debug.LogError("Firestore aún no está inicializado.");
-            return; // Evita que el método continúe si `firestore` es null
+            return;
         }
 
         Debug.Log("Guardando datos en Firestore...");
 
-        // Crea un diccionario con los datos
+        string sceneName = SceneManager.GetActiveScene().name;
+
         var data = new Dictionary<string, object>
         {
             { "TimeSpent", timeSpent },
             { "ClickCount", clickCount },
-            { "DoubleClickCount", doubleClickCount }
+            { "DoubleClickCount", doubleClickCount },
+            { "SceneName", sceneName }
         };
 
-        // Guarda los datos en la colección "UserData"
         firestore.Collection("UserData").AddAsync(data).ContinueWithOnMainThread(task =>
         {
             if (task.IsCompleted)

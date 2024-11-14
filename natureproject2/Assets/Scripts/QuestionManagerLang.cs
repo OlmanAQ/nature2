@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using Firebase.Firestore;
 using System.Threading.Tasks;
 using System.Collections;
-using UnityEngine.Localization;  // Importa la biblioteca de localización
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
 public class QuestionManagerLang : MonoBehaviour
@@ -17,9 +17,7 @@ public class QuestionManagerLang : MonoBehaviour
     private Dictionary<string, object> loadedQuestions;
     private string currentCorrectAnswer;
 
-    // Hacer languageCode una variable de clase
     private string languageCode;
-
     private int maxRetries = 10;
 
     void Start()
@@ -48,7 +46,7 @@ public class QuestionManagerLang : MonoBehaviour
 
             if (loadedQuestions != null && loadedQuestions.Count > 0)
             {
-                ShowRandomQuestion();  // Ya no es necesario pasar languageCode como parámetro
+                ShowRandomQuestion();
                 yield break;
             }
 
@@ -147,13 +145,55 @@ public class QuestionManagerLang : MonoBehaviour
     {
         if (selectedAnswer == currentCorrectAnswer)
         {
-            feedbackTextUI.text = "¡Correcto!";
+            // Verificar el idioma para el mensaje de éxito
+            if (languageCode == "es")
+            {
+                feedbackTextUI.text = "¡Correcto!";
+            }
+            else if (languageCode == "en")
+            {
+                feedbackTextUI.text = "Correct Answer!";
+            }
+            else
+            {
+                feedbackTextUI.text = "Correct!"; // Mensaje por defecto
+            }
+
             Debug.Log("Respuesta correcta");
         }
         else
         {
-            feedbackTextUI.text = "Respuesta incorrecta. Intenta de nuevo.";
+            // Verificar el idioma para el mensaje de error
+            if (languageCode == "es")
+            {
+                feedbackTextUI.text = "Respuesta incorrecta. Intenta de nuevo.";
+            }
+            else if (languageCode == "en")
+            {
+                feedbackTextUI.text = "Incorrect answer. Try again.";
+            }
+            else
+            {
+                feedbackTextUI.text = "Incorrect. Try again."; // Mensaje por defecto
+            }
+
             Debug.Log("Respuesta incorrecta");
         }
     }
+
+    public void GoToMap()
+    {
+        Debug.Log("GoTomap funciotn called");
+        string lastScene = GlobalSceneManager.instance.GetLastScene();
+        //si la escena contiene "observatorio" envialo al mapa
+        if (string.IsNullOrEmpty(lastScene))
+        {
+            Debug.Log("escena vacia");
+        }
+        Debug.Log("escnea ultima vaciua" + lastScene) ;
+        GlobalSceneManager.instance.ChangeScene(lastScene);
+
+    }
 }
+
+
